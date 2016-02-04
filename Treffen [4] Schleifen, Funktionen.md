@@ -17,7 +17,7 @@
     - Typ:
     - Beispiel für Wert:
 
-- Bei einer **Variablendeklaration** legt man welche zwei Eigenschaften einer Variable fest? Bei der **Variablendefinition** legt man welche zusätzliche Eigenschaft einer Variable fest?
+- Bei einer **Variablendeklaration** legt man welche zwei Eigenschaften einer Variable fest? Bei der **Variablendefinition** legt man welche zusätzliche Eigenschaft einer Variable fest? Wie sieht eine Variablendeklaration/definition in Java aus?
 
   - Variablendeklaration
     - Eigenschaft:
@@ -73,6 +73,74 @@
 
 # Schleifen (Loops)
 
+- Dienen wie `if`-Abfragen der Kontrolle des Programmflusses.
+- Der Programmfluss gibt Auskunft darüber welche Anweisung als nächstes ausgeführt wird.
+- Zu Erinnerung: `if` dient zur „Verzweigung“ des Programmflusses.
+
+```java
+    if (boolscher Ausdruck) {
+        // erster Zweig: Anweisungen die ausgeführt werden falls
+        //               boolscher Ausdruck `true` ist
+    } else {
+        // zweiter Zweig: Anweisungen die ausgeführt werden falls
+        //                boolscher Ausdruck `false` ist
+        // `else` ist optional! `if` ohne `else` möglich.
+        // Umgekehrt – `else` ohne `if` – ist das nicht der Fall!
+    }
+```
+
+- Schleifen dienen dazu Code mehrfach auszuführen. Dabei kann es auch vorkommen, dass der Code in einer Schleife gar nicht (also 0 mal) ausgeführt wird.
+- Grundsätzlich gibt es in Java 3 verschiedene Arten von Schleifen:
+    - **While-Schleife**: `while() {}`
+    - **Do-While-Schleife**: `do {} while;`
+    - **for-Schleife**: `for(;;) {}`
+- Jede der vorigen Arten kann durch ein wenig Änderung am Code in einer der anderen Arten umgewandelt werden.
+
+## While-Schleife
+
+### Aufbau
+
+```java
+    while (boolscherAusdruck) {
+        // Code der ausgeführt wird solange `boolscher Ausdruck `true` ist
+    }
+```
+
+### Beispiel
+
+```java
+    int number = 10;
+
+    /*
+      Schleifenkopf:   `while ()`
+      Schleifenkörper: Alles zwischen geschwungenen Klammern: `{ .. }`
+
+    */
+    while (number > 0) {
+        System.out.println(number + " kleine Jägermeister");
+        number = number - 1; // Geht genauso: number--;
+    }
+```
+
+Ausgabe:
+
+    10 kleine Jägermeister
+    9 kleine Jägermeister
+    8 kleine Jägermeister
+    7 kleine Jägermeister
+    6 kleine Jägermeister
+    5 kleine Jägermeister
+    4 kleine Jägermeister
+    3 kleine Jägermeister
+    2 kleine Jägermeister
+    1 kleine Jägermeister
+
+### Übung
+
+#### JaegerMeister
+
+Wie kann man den obigen Code ändern, damit die letzte Zeile grammatisch korrekt ist, also „1 kleiner Jägermeister“ ausgegeben wird?
+
 #### SiebenUndZwanzigWhile
 
 Ein Programm soll die durch 7 oder 20 teilbaren Zahlen von 0 bis zu einer vorgegeben Grenze (Variable `obereGrenze`) ausgeben.
@@ -121,8 +189,8 @@ Wie kann man die folgende allgemeine Form einer Do-While-Schleife in eine While-
         Statement 2; // Beliebiges Statement 2
         …
         Statement n; // Beliebiges Statement n
-    } while (boolscher Ausdruck) // In den Klammern steht irgendein
-                                 // beliebiger boolscher Ausdruck
+    } while (boolscherAusdruck) // In den Klammern steht irgendein
+                                // beliebiger boolscher Ausdruck
 ```
 
 ## For-Schleife
@@ -139,7 +207,7 @@ Wie kann man die folgende allgemeine Form einer Do-While-Schleife in eine While-
 ```java
     // Initialisierung wird genau am Anfang einmal ausgeführt
     // Ausdruck wird jeweils nach dem Code im Schleifenkörper ausgeführt
-    for (Initialisierung; boolscher Ausdruck; Ausdruck) {
+    for (Initialisierung; boolscherAusdruck; Schritt) {
         // Code der ausgeführt wird solange `boolscher Ausdruck `true` ist
     }
 ```
@@ -148,9 +216,9 @@ In While-Schleife umgewandelt:
 
 ```java
     Initialisierung;
-    while (boolscher Ausdruck) {
+    while (boolscherAusdruck) {
         // Code der ausgeführt wird solange `boolscher Ausdruck `true` ist
-        Ausdruck;
+        Schritt;
     }
 ```
 
@@ -261,6 +329,15 @@ Beispiel-Ausgabe (low = 123, high = 456)
     }
 ```
 
+- **Keywords:** mehrere durch Leerzeichen getrennte Schlüsselwörter (optional)
+- **Rückgabetyp:** Typ des Wertes der von der Funktion „retuniert“ wird
+- **Name**: Name der Funktion
+- **Eingabeparameter**:
+  - Paare von Typ und Name (der Variable) durch Leerzeichen getrennt:
+    - Beispiel: `String[] args` (Typ: `String[]`, Name: `args`)
+  - Bei mehreren Eingabeparametern: Trennung durch Beistrich
+    - Beispiel: `(int var1, String var2, double huhu)`
+
 ---
 ### Keywords (Schlüsselwörter)
 
@@ -270,6 +347,10 @@ Beispiel-Ausgabe (low = 123, high = 456)
   - Typen: `String`, `boolean`, `float`, `int`, …
   - Abfragen: `if`, `else`, `switch`, …
   - Schleifen: `for`, `while`
+- Bei Funktionskopf können natürlich nur passende Schlüsselwörter verwendet werden:
+  - Sichtbarkeit: `private`, `protected`, `public`
+  - Klassenmethode (statt Objektmethode): `static`
+  - Andere Schlüsselwörter: `final`,…
 ---
 
 ### Beispiele
@@ -284,7 +365,7 @@ Beispiel-Ausgabe (low = 123, high = 456)
   - `public`: Gibt „Sichtbarkeit“ der Funktion an
   - `static`: Es handelt sich um eine Klassenmethode (im Gegensatz zu einer Objektmethode)
 - **Name der Funktion**: `main`
-- Die Funktion hat **einen Parameter** `arguments` vom Typ `String[]` (Array von String)
+- Die Funktion hat **einen Parameter** `arguments` vom Typ `String[]` (Array („Liste“) von String)
 - **Rückgabetyp**: `void`
 
 ```java
@@ -296,7 +377,7 @@ Beispiel-Ausgabe (low = 123, high = 456)
 - **Name der Funktion**: `quad`
 - Die Funktion hat **einen Parameter** `number` vom Typ `int`
 - **Rückgabetyp**: `int`
-- `return`: Gibt an, dass der rechts stehende Wert als Ergebnis der Funktion zurückgegeben wird. Es kann auch mehrere Vorkommnisse von `return` in einem Programm geben
+- `return`: Gibt an, dass der rechts stehende Wert als Ergebnis der Funktion zurückgegeben wird. Es kann auch mehrere Vorkommnisse von `return` in einem Programm geben. Nach `return` springt Programmausführung zur Stelle von Funktionsaufruf zurück.
 
 ### Übung
 
@@ -319,7 +400,9 @@ Beispiel-Ausgabe (low = 123, high = 456)
 ## Aufbau (Aufruf)
 
 ```
-  Name(Werte für Eingabewete)
+  Name(Werte für Eingabewete) // Achtung!: - Nur Werte (Ausdrücke)
+                              //           - Typen sind schon von
+                              //             Funktionsdefinition bekannt
 ```
 
 ### Beispiele
@@ -338,7 +421,7 @@ Beispiel-Ausgabe (low = 123, high = 456)
   // Ergebnis (des Ausdrucks): ?
   quad(20)
 
-  // Verwendung der Funktion Maximum
+  // Verwendung der Funktion `maximum`
   int a = 0;
   int b = -5
   // Ausgabe: ?
