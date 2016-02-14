@@ -95,7 +95,7 @@ Programm frei machen von Fehlern
 - `l`, `L`: Zahl wird – nicht als `int` – sondern als **`long`** interpretiert
   - `long`: Ganzzahl mit größerem Wertebereich als `int`
   - Long-Zahlen sind (in Java) doppelt so „lang“ (doppelte Anzahl von Bits) wie `int`
-  - Beispiele: `12L`, `82138728349234L`, `12.0L`
+  - Beispiele: `12L`, `82138728349234L`
 
 - `f`, `F`: Zahl wird – nicht als `double` oder `int` sondern – als **`float`** interpretiert
   - `float`: Fließkommazahl mit kleinerem Wertebereich wie `double`
