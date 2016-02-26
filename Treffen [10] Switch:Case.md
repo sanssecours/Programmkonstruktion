@@ -2,48 +2,60 @@
 
 - Welche Klasse kann man zum Einlesen von Werten in Java verwenden?
 
+  Scanner
+
 - Was ist der (grobe) Unterschied zwischen einer Klasse und einem Objekt?
+
+  Klasse:  Schablone  (z.B. Auto)
+  Objekt: Konkrete Instanz (z.B. VW Golf; silber; Nummerntafel “xyz 123”)
 
 - Zu welchem Zweck werden eckige Klammern (`[]`) in Java verwendet?
 
+  Für Arrays
+
 - Was bedeutet der Begriff „Seiteneffekt“?
+
+  Seiteneffekt: Es gibt gewissen Zustand; durch Berechnungen ergibt sich Zustandsänderung, diese kann zu unterschiedlichen Ergebnissen führen
 
 - Sind die folgenden Ausdrücke gültig? Falls ja, wie lautet ihr Wert und Typ? Verursachen die Ausdrücke Seiteneffekte oder nicht?
 
 ```java
     int forty = 40;
 
-    True "||" False ? 1 : 2         // Gültig:
+    True "||" False ? 1 : 2         // Gültig: Nein
                                     // Wert:
                                     // Typ:
                                     // Seiteneffekt:
 
     2 + 3 < 5 ? true || false :
-                false && true       // Gültig:
-                                    // Wert:
-                                    // Typ:
-                                    // Seiteneffekt:
+                false && true       // Gültig: Ja
+                                    // Wert: false
+                                    // Typ: boolean
+                                    // Seiteneffekt: Nein
 
-    (true ? true : false) && true   // Gültig:
-                                    // Wert:
-                                    // Typ:
-                                    // Seiteneffekt:
+    (true ? true : false) && true   // Gültig: Ja
+                                    // Wert: true
+                                    // Typ: boolean
+                                    // Seiteneffekt: Nein
 
     forty++ - forty-- +
-    (1 < 1 ? 2 : 4) + --forty       // Gültig:
-                                    // Wert:
-                                    // Typ:
-                                    // Seiteneffekt:
+    (1 < 1 ? 2 : 4) + --forty       // Gültig: Ja
+                                    // Wert: 42
+                                    // Typ: int
+                                    // Seiteneffekt: Ja
+    // 40 - 41 + 4 + 39 = 42
+
 
     forty = 40;
 
     // `forty-=40` ist das gleiche wie `forty = forty - 40`
-    (forty -= 39) + 2 + forty       // Gültig:
-                                    // Wert:
-                                    // Typ:
-                                    // Seiteneffekt:
+    (forty -= 39) + 2 + forty       // Gültig: Ja
+                                    // Wert: 4
+                                    // Typ: int
+                                    // Seiteneffekt: Ja
+    // 1 + 2 + 1
 
-    1 ? 2 : 3                       // Gültig:
+    1 ? 2 : 3                       // Gültig: Nein
                                     // Wert:
                                     // Typ:
                                     // Seiteneffekt:
@@ -63,15 +75,18 @@ wenn wir es wie folgt aufrufen?
 
 ```bash
 java Tmp '1 4' 1 7 3
+#          0   1 2 3
 ```
 
 Ausgabe:
 
 ```
-?
+1337
 ```
 
 - Für welchen Begriff steht die Abkürzung `API`?
+
+  Application Programming Interface
 
 # Switch/Case
 
