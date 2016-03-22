@@ -14,42 +14,44 @@
   Ausgabe:
 
   ```
-  ?
+  1972: Marlon Brando (The Godfather)
+  1980: Robert De Niro (Raging Bull)
+  1982: Ben Kingsley (Gandhi)
   ```
 
 -  Welche 3 (bis 4) Arten von Schleifen kennst du?
 
-   1. —
-   2. —
-   3. —
-   4. —
+   1. for-Schleife
+   2. while-Schleife
+   3. do-while-Schleife
+   4. for-each-Schleife
 
 - Welche der folgenden Ausdrücke ist gültig? Falls der Ausdruck gültig ist, wie lautet sein Wert und welchen Typ hat er?
 
   ```java
-      true ^ true & true     // Gültig:
+      true ^ true & true     // Gültig: Ja
+                             // Wert: false
+                             // Datentyp: boolean
+
+      1 + (1 * 31 * 23) % 1  // Gültig: Ja
+                             // Wert: 1
+                             // Datentyp: int
+
+      20 + 1++ -2            // Gültig: Nein (++ bei Konstante nicht möglich)
                              // Wert:
                              // Datentyp:
 
-      1 + (1 * 31 * 23) % 1  // Gültig:
-                             // Wert:
-                             // Datentyp:
+      64 >>> 3 == 8          // Gültig: Ja
+                             // Wert: true
+                             // Datentyp: boolean
 
-      20 + 1++ -2            // Gültig:
-                             // Wert:
-                             // Datentyp:
+      'a' + "B"              // Gültig: Ja
+                             // Wert: "aB"
+                             // Datentyp: String
 
-      64 >>> 3 == 8          // Gültig:
-                             // Wert:
-                             // Datentyp:
-
-      'a' + "B"              // Gültig:
-                             // Wert:
-                             // Datentyp:
-
-      'a' + 'b'              // Gültig:
-                             // Wert:
-                             // Datentyp:
+      'a' + 'b'              // Gültig: JA
+                             // Wert: 195
+                             // Datentyp: int
   ```
 
 - Der folgende Code beinhaltet einen Fehler:
@@ -82,7 +84,7 @@
        for (int repetitions = times; repetitions >= 1; repetitions--) {
            output += text;
        }
-       return text;
+       return output;
    }
    ```
 
@@ -94,29 +96,29 @@
       char character = 'A';
       String text = "Ho";
 
-      repeat('H', 20);              // Gültig:
+      repeat('H', 20);              // Gültig: Nein
+                                    // Fehler: 1. Argument muss String sein
+
+      repeat("HuHu"; 3);            // Gültig: Nein
+                                    // Fehler: Strichpunkt statt Beistrich
+
+      repeat("2", 20);              // Gültig: Ja
                                     // Fehler:
 
-      repeat("HuHu"; 3);            // Gültig:
-                                    // Fehler:
+      repeat("Eins", 2, 3);         // Gültig: Nein
+                                    // Fehler: Zusätzliches 3. Argument
 
-      repeat("2", 20);              // Gültig:
-                                    // Fehler:
+      repeat(2, "Zwei");            // Gültig: Nein
+                                    // Fehler: Falsche Typen
 
-      repeat("Eins", 2, 3);         // Gültig:
-                                    // Fehler:
-
-      repeat(2, "Zwei");            // Gültig:
-                                    // Fehler:
-
-      repeat(text, number) + " ," + // Gültig:
+      repeat(text, number) + " ," + // Gültig: Ja
       "now I have a machine gun";   // Fehler:
 
-      repeat(n, var);               // Gültig:
-                                    // Fehler:
+      repeat(n, var);               // Gültig: Nein
+                                    // Fehler: `n` und `var` nicht definiert
 
-      repeat(text, character);      // Gültig:
-                                    // Fehler:
+      repeat(text, character);      // Gültig: Nein
+                                    // Fehler: character ist kein `int`
    ```
 
 - Nachdem wir den Fehler in `repeat` ausgebessert haben, wie lautet die **Ausgabe** von folgendem Code?
@@ -130,5 +132,6 @@
   Ausgabe:
 
   ```
-  ?
+  AA
   ```
+
