@@ -2,7 +2,11 @@
 
 - Durch welche Eigenschaft unterscheidet sich überladene Funktionen auf jeden Fall voneinander?
 
+Durch die Anzahl und/oder der Datentyp der Parameter.
+
 - Welche Eigenschaft von überladenen Funktionen ist auf jeden Fall gleich?
+
+Der Name der Funktion.
 
 - Wie lautet die Ausgabe des folgenden Codes?
 
@@ -34,5 +38,7 @@
 **Lösung:**
 
 ```
-?
+You that never done nothin'
+But build to destroy
+You play with my world
 ```
