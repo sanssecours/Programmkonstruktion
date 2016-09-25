@@ -167,7 +167,7 @@ Beispiel-Ausgabe (`obereGrenze = 21`):
 ## Do-While Schleife
 
 - Ähnlich wie While-Schleife
-- Einziger Unterscheid: Code in Schleifenkörper wird auf jeden Fall einmal ausgeführt.
+- Einziger Unterschied: Code in Schleifenkörper wird auf jeden Fall einmal ausgeführt.
 
 ### Aufbau
 
