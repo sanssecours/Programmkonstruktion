@@ -1,22 +1,29 @@
-# Korrektur
-
-- Primitiver Boolean-Datentyp verwendet Keyword `boolean` nicht `bool`!
-
 # Wiederholungsfragen
 
 - Wie unterscheiden sich Anweisungen (Statement, Befehl) und Ausdrücke (Expression)?
 
-Ausdruck ergibt Wert. Kann Teil einer Anweisung sein
+  - Ausdruck (Expression):
+     - hat einen bestimmten Wert und Typ
+     - Beispiele:
+       - `3`
+       - `3 + y`
+     - Können Teil einer anderen Ausdrucks/einer Anweisung sein
+
+  - Anweisung (Statement, Befehl):
+    - Geben Schritte vor, die der Computer ausführen soll
+    - Beispiele:
+      - `x = 3;`,
+      - `if (true) { System.out.printf("Hello World") };`
 
 - Handelt es sich bei den folgenden Code um eine Anweisung oder einen Ausdruck? Hinweis: Strichpunkte wurden weggelassen, damit es nicht sofort ersichtlich ist wann es sich um einen Ausdruck oder Anweisung handelt.
 
 ```java
         System.out.println("Hi")  // Anweisung
-        1337                      // Ausdruck Typ: int
-        true && var               // Ausdruck Typ: boolean
+        1337                      // Ausdruck
+        true && var               // Ausdruck
         a = 10                    // Anweisung
         if (true)                 // Anweisung
-        (10 + 3) * 20             // Ausdruck Typ: int
+        (10 + 3) * 20             // Ausdruck
 ```
 
 - Sind folgende Ausdrücke gültig. Falls ja: Welche Wert und Type haben sie?
@@ -30,35 +37,48 @@ Ausdruck ergibt Wert. Kann Teil einer Anweisung sein
                             // Ergebnis: "ab"
                             // Typ:      String
 
+
+    // (1 + 123.4) != 2
+    // 124.4 != 2
+    // true
     (1 + a) != 2            // Gültig:   Ja
-                            // Ergebnis: false
+                            // Ergebnis: true
                             // Typ:      boolean
 
     2 <= 3 || 2 >= 3        // Gültig:   Ja
                             // Ergebnis: true
                             // Typ:      boolean
 
-    "Bla" + (2 < 3)         // Gültig:    Ja
-                            // Ergebnis:  "Blatrue"      Nicht "Bla(2<3)"
-                            // Typ:       String
+    // "Bla" + (2 < 3)
+    // "Bla" + true
+    // "Bla" + "true"
+    // "Blatrue"
+    "Bla" + (2 < 3)         // Gültig:   Ja
+                            // Ergebnis: "Blatrue"
+                            // Typ:      "String"
 
-    1341252142 % 2          // Gültig:    Ja
-                            // Ergebnis:  0
-                            // Typ:       int
+    1341252142 % 2          // Gültig:   Ja
+                            // Ergebnis: 0
+                            // Typ:      int
 
-    (wahr && true) < false  // Gültig:    Nein
-                            // Ergebnis:  -
-                            // Typ:       -
+
+    // (wahr && true) < false
+    // (false && true) < false
+    // false < false
+    // Error
+    (wahr && true) < false  // Gültig:   Nein
+                            // Ergebnis: -
+                            // Typ:      -
 
     // Tricky! Bitte solchen Code nie verwenden!
+
+    // (one++) + (--one) - (1)
+    // 1 + (--one) - (1)
+    // 1 + 1 - (1)
+    // 1
     (one++) + (--one) - (1) // Gültig:   Ja
-                            // Ergebnis:      Nicht 5 (3 + 3 - 1)
+                            // Ergebnis: 1
                             // Typ:      int
-    // 1. Erster Teilausdruck: 1
-    // 2. In `one` steht jetzt 2  „one++ ähnlich one = one + 1“
-    // 3. Zweiter Ausdruck:    1
-    // 4. In `one` steht jetzt 1
-    // 5. Ergebnis:   1 + 1 - 1 = 1
 
 ```
 
@@ -75,12 +95,8 @@ Ausdruck ergibt Wert. Kann Teil einer Anweisung sein
         }
 ```
 
-Ausgabe: Gar nichts
 
 - Welchem Zweck dienen geschwungene Klammern (`{}`)? Kann man diese manchmal weglassen? Falls ja, wann?
-
-- Dienen zum „zusammenfassen“ von mehreren Anweisungen
-- Weglassen kann man sie wenn man eine/gar keine Anweisung hat
 
 # Schleifen (Loops)
 
