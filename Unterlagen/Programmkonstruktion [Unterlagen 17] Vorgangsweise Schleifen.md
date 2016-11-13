@@ -143,4 +143,3 @@ Die Fakultät einer Zahl soll berechnet werden.
         zahl--;
     }
     ```
-

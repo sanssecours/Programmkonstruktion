@@ -69,25 +69,3 @@ double zahl3 = 2.3;
 ### Boolean, boolean
 
 - Mögliche Werte: `true`, `false`
-
-# Aufgabe
-
-1. Definiere eine Ganzzahl-Variable mit Name `ganzzahl`
-2. Definiere eine Fließkomma-Variable fliesskomma mit Wert `12.34`
-3. Definiere eine neue Fließkomma-Variable `ergebnis` ohne Wert
-4. Speichere in ergebnis die Summe von `fliesskomma` und `ganzzahl`
-5. Gib `ergebnis` auf Bildschirm aus
-
-```java
-// 1.
-int ganzzahl;
-// 2.
-float fliesskomma = 12.34; //geht nicht wegen Genauigkeit
-double fliesskomma = 12.34;
-// 3.
-float ergebnis;
-// 4.
-ergebnis = fliesskomma + ganzzahl;
-// 5.
-System.out.println(ergebnis);
-```

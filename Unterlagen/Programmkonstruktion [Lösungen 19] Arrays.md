@@ -1,6 +1,8 @@
-# Wiederholungsfragen
+# Aufgaben
 
-## Ausdrücke (Expressions)
+## Wiederholungsfragen
+
+### Ausdrücke (Expressions)
 
 - Welche zwei wichtigen Eigenschaften von einem Ausdruck kann man – sofern die Werte von den im Ausdruck vorkommenden Variablen bekannt sind – immer angeben?
 
@@ -14,38 +16,40 @@
 - Sind die folgenden Ausdrücke gültig? Falls ja welchen Wert und Typ besitzen sie?
 
   ```java
-  'Leo' + "Cabrio"        // Gültig: Nein
-                          // Wert:
-                          // Typ:
+  'Leo' + "Cabrio"        // Gültig:  Nein
+                          // Wert:    -
+                          // Typ:     -
 
-  1 + 2/4                 // Gültig: Ja
-                          // Wert: 1
-                          // Typ: int
+  1 + 2/4                 // Gültig:  Ja
+                          // Wert:    1
+                          // Typ:     int
 
-  1 - (int) 2/4           // Gültig: Ja
-                          // Wert: 1
-                          // Typ: int
+  1 - (int) 2/4           // Gültig:  Ja
+                          // Wert:    1
+                          // Typ:     int
 
-  true ? "Hi" : 'H'       // Gültig: Ja
-                          // Wert: "Hi"
-                          // Typ: String
+  true ? "Hi" : 'H'       // Gültig:  Ja
+                          // Wert:    "Hi"
+                          // Typ:     String
 
-  true && False           // Gültig: Nein
-                          // Wert:
-                          // Typ:
+  true && False           // Gültig:  Nein
+                          // Wert:    -
+                          // Typ:     -
 
-  "Hello " + "World"      // Gültig: Ja
-                          // Wert: "Hello World"
-                          // Typ: String
+  "Hello " + "World"      // Gültig:  Ja
+                          // Wert:    "Hello World"
+                          // Typ:     String
 
-  "Hello " - "World"      // Gültig: Nein
-                          // Wert:
-                          // Typ:
+  "Hello " - "World"      // Gültig:  Nein
+                          // Wert:    -
+                          // Typ:     -
   ```
 
-## Anweisungen (Statements)
+### Anweisungen (Statements)
 
 - In welcher Reihenfolge werden Anweisungen vom Computer grundsätzlich ausgeführt/ausgewertet („Programmfluss“)?
+
+  - Von oben nach unten, Von links nach rechts
 
 - Welche zwei speziellen Kategorien von Statements erlauben es  den Programmfluss zu ändern?
 

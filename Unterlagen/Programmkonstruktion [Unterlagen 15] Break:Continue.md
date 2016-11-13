@@ -58,26 +58,3 @@ for (int number = 1; number <= 10; number++) {
 ```
 1
 ```
-
-## Übung
-
-Wie lautet die Ausgabe des folgenden Programmcodes?
-
-```java
-int number = 10;
-while(number >= 5) {
-    System.out.println(number--);
-    if (number > 7) continue;
-    break;
-}
-System.out.println("Done");
-```
-
-Ausgabe:
-
-```
-10
-9
-8
-Done
-```
