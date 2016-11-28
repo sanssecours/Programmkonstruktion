@@ -20,10 +20,10 @@ Um eine  Variable für eine Liste zu **deklarieren** schreibt man den Typ den di
 Hier ein paar Beispiele:
 
 ```java
-    int[] intZahlen;       // Liste von (int)-Zahlen
-    Double[] doubleZahlen; // Liste von (Double)-Zahlen
-    String[] texte;        // Liste von Zeichenketten
-    float[] floatZahlen;   // Liste von (float)-Zahlen
+int[] intZahlen;       // Liste von (int)-Zahlen
+Double[] doubleZahlen; // Liste von (Double)-Zahlen
+String[] texte;        // Liste von Zeichenketten
+float[] floatZahlen;   // Liste von (float)-Zahlen
 ```
 
 Bei der Deklaration wird (wie wir ja schon wissen) der Wert der Variable  noch nicht festgelegt. Der Code
@@ -150,7 +150,7 @@ Die Ausgabe des Codes ist auf jeden Fall die selbe:
 [0, 0, 0]
 ```
 
-Hier mal ein Beispielprogramm mit Definitionen von Arrays von verschiedenen Typen:
+Hier mal ein Beispielprogramm mit Definitionen von Arrays verschiedener Typen:
 
 ```java
 import java.util.Arrays; // Brauchen wir für Arrays.toString
@@ -242,7 +242,7 @@ Mit dazugehöriger Variable(n-Deklaration) sieht das dann zum Beispiel so aus:
 String[] texte = new String[] {"eins", "zwei", "drei"};
 ```
 
-Das `new String[]` kann man wenn man Deklaration und Definition in einem erledigt – wie in obiger Code-Zeile – auch weglassen:
+Das `new String[]` kann man – wenn man Deklaration und Definition in einem erledigt (so wie in obiger Code-Zeile) – auch weglassen:
 
 ```java
 String[] texte = {"eins", "zwei", "drei"};
